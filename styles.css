@@ -1,0 +1,18 @@
+body {
+  background: #efecfc;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.module__title {
+  margin: 3rem 1rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.grain {
+  margin: 0;
+  padding: 1rem;
+  background: #cec3f4;
+}
