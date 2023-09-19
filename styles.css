@@ -13,6 +13,33 @@ body {
 
 .grain {
   margin: 0;
-  padding: 1rem;
   background: #cec3f4;
+}
+
+.grain .introduction,
+.grain .content__text,
+.grain .content__footer {
+  padding: 1rem;
+}
+
+.grain .introduction,
+.grain .content__footer {
+  background: #e5ddff;
+}
+
+.grain .content__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 22px;
+}
+
+.button--green {
+  background: #14865d;
+  color: #ffffff;
 }
