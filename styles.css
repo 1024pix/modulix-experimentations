@@ -52,7 +52,7 @@ body {
 .grain .content__image {
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .grain .content__image img {
@@ -73,7 +73,7 @@ body {
 
 .grain .content__footer .button {
   flex-grow: 1;
-  flex-basis: calc(100% - (768px / 2));
+  flex-basis: calc((768px / 2) - (2 * 1rem) - 12px);
   /* min-width: 140px; */
 }
 
