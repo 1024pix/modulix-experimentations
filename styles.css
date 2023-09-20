@@ -5,6 +5,13 @@ body {
   margin: 0;
 }
 
+.module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .module__title {
   margin: 3rem 1rem;
   overflow-wrap: break-word;
