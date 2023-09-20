@@ -32,12 +32,12 @@
 
 .grain {
   margin: 0;
-  background: #cec3f4;
   width: 100%;
 }
 
 .grain .introduction,
 .grain .content__text,
+.grain .content__image,
 .grain .content__footer {
   padding: 1rem;
 }
@@ -45,7 +45,6 @@
 .grain .content__image {
   display: flex;
   justify-content: center;
-  padding: 1rem;
 }
 
 .grain .content__image img {
@@ -55,6 +54,11 @@
 .grain .introduction,
 .grain .content__footer {
   background: #e5ddff;
+}
+
+.grain .content__image,
+.grain .content__text {
+  background: #cec3f4;
 }
 
 .grain .content__footer {
