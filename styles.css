@@ -66,8 +66,15 @@ body {
 
 .grain .content__footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 12px;
+}
+
+.grain .content__footer .button {
+  flex-grow: 1;
+  flex-basis: calc(100% - (768px / 2));
+  /* min-width: 140px; */
 }
 
 .button {
