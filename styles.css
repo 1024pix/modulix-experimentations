@@ -71,12 +71,6 @@ body {
   gap: 12px;
 }
 
-.grain .content__footer .button {
-  flex-grow: 1;
-  flex-basis: calc((768px / 2) - (2 * 1rem) - 12px);
-  /* min-width: 140px; */
-}
-
 .button {
   padding: 12px 20px;
   border: 1px solid transparent;
