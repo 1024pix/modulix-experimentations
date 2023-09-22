@@ -15,7 +15,7 @@ function addArticle() {
 
 function injectArticle() {
     const ARTICLE = `
-        <article id="grain_${grainId}" class="grain">
+        <article id="grain_${grainId}" class="grain grain--fade-in-image">
           <div class="introduction">
             <p>
               Grain défi num. ${grainId} : Vous l’avez sûrement remarqué, nous parlons depuis le début de ce

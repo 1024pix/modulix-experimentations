@@ -67,3 +67,13 @@
   flex-wrap: wrap;
   gap: 12px;
 }
+
+.grain--fade-in-image {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
