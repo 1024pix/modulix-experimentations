@@ -67,10 +67,10 @@ function injectArticle() {
 }
 
 function scrollToArticle() {
-    const newGrain = document.getElementById(`grain_${grainId}`);
-    const y = newGrain.getBoundingClientRect().top + window.scrollY;
+    const prevGrain = document.getElementById(`grain_${grainId - 1}`);
+    const y = prevGrain.getBoundingClientRect().bottom + window.scrollY;
     window.scroll({
-        top: y - 150,
+        top: y - 50,
         behavior: 'smooth',
     });
 }
