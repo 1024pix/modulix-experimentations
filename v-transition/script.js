@@ -15,7 +15,7 @@ function addArticle() {
 
 function injectArticle() {
     const ARTICLE = `
-        <article id="grain_${grainId}" class="grain grain--fade-in-image">
+        <article tabindex="-1" id="grain_${grainId}" class="grain grain--fade-in-image">
           <div class="introduction">
             <p>
               Grain défi num. ${grainId} : Vous l’avez sûrement remarqué, nous parlons depuis le début de ce
@@ -67,10 +67,8 @@ function injectArticle() {
 }
 
 function scrollToArticle() {
-    const prevGrain = document.getElementById(`grain_${grainId - 1}`);
-    const y = prevGrain.getBoundingClientRect().bottom + window.scrollY;
-    window.scroll({
-        top: y - 50,
-        behavior: 'smooth',
-    });
+    const prevGrain = document.getElementById(`grain_${grainId}`);
+    if (prevGrain) {
+        prevGrain.focus();
+    }
 }
