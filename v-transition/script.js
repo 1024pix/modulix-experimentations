@@ -3,18 +3,18 @@ let grainId = 1;
 document.addEventListener('DOMContentLoaded', load);
 
 function load(event) {
-    document.getElementById('test').addEventListener('click', addArticle)
+    document.getElementById('test').addEventListener('click', addGrain)
 }
 
-function addArticle() {
-    injectArticle();
-    scrollToArticle();
-    document.getElementById(`button_grain_${grainId}`).addEventListener('click', addArticle)
+function addGrain() {
+    injectGrain();
+    scrollToGrain();
+    document.getElementById(`button_grain_${grainId}`).addEventListener('click', addGrain)
     grainId++;
 }
 
-function injectArticle() {
-    const ARTICLE = `
+function injectGrain() {
+    const GRAIN = `
         <article tabindex="-1" id="grain_${grainId}" class="grain grain--fade-in-image">
           <div class="introduction">
             <p>
@@ -63,7 +63,7 @@ function injectArticle() {
         </article>
 `;
     const module = document.querySelector('#module_1 .module__content');
-    module.insertAdjacentHTML('beforeend', ARTICLE);
+    module.insertAdjacentHTML('beforeend', GRAIN);
 }
 
 function scrollToArticle() {
