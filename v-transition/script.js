@@ -66,9 +66,16 @@ function injectGrain() {
     module.insertAdjacentHTML('beforeend', GRAIN);
 }
 
-function scrollToArticle() {
-    const prevGrain = document.getElementById(`grain_${grainId}`);
-    if (prevGrain) {
-        prevGrain.focus();
+function scrollToGrain() {
+    const newGrainForFocus = document.getElementById(`grain_${grainId}`);
+    const prevGrainForScroll = document.getElementById(`grain_${grainId - 1}`);
+    const y = prevGrainForScroll.getBoundingClientRect().bottom + window.scrollY;
+
+    if (prevGrainForScroll && newGrainForFocus) {
+        newGrainForFocus.focus({ preventScroll: true });
+        window.scroll({
+            top: y - 50,
+            behavior: 'smooth',
+        });
     }
 }
