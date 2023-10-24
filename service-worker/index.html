@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <meta charset="UTF-8" />
+  <title>Experimentations service-worker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="service-worker/styles.css" />
+  <body>
+    <main id="module_1" class="module">
+      <div class="module__title">
+        <h1>A la découverte de l’adresse IP</h1>
+        <img src="../icon.png" alt="" />
+      </div>
+
+      <div class="module__content" aria-live="assertive">
+        <article id="grain_0" class="grain">
+          <div class="introduction">
+            <p>
+              Pour connaître votre zone géographique, vous concernant {région},
+              nous avons utilisé votre adresse IP publique.
+            </p>
+
+            <p>
+              C’est quoi une adresse IP publique ? A quoi ça sert ? Explications
+              dans cette vidéo !
+            </p>
+          </div>
+
+          <div class="content">
+            <div class="content__image">
+              <img src="../img.png" alt="" />
+            </div>
+
+            <footer class="content__footer">
+              <button id="test" class="button button--green">Continuer</button>
+              <button class="button button--green">Indice</button>
+            </footer>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('service-worker/service-worker.js')
+          .then((registration) => {
+            console.log('😎 Le Service Worker est enregistré', registration);
+          })
+          .catch((error) => {
+            console.error(
+              "😥 L'enregistrement ne s'est pas bien passé :",
+              error
+            );
+          });
+      });
+    }
+  </script>
+
+  <script src="service-worker/script.js" type="text/javascript"></script>
+</html>
